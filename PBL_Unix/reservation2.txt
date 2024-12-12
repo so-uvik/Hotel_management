@@ -1,0 +1,11 @@
+Booking ID, Guest name, Contact details, Check in date, Check out date
+1001, John Doe, john.doe@example.com, 2024-12-01, 2024-12-05
+1002, Jane Smith, jane.smith@example.com, 2024-12-02, 2024-12-06
+1003, Alice Brown, alice.brown@example.com, 2024-12-03, 2024-12-07
+1004, Bob Johnson, bob.johnson@example.com, 2024-12-04, 2024-12-08
+1005, Charlie Lee, charlie.lee@example.com, 2024-12-05, 2024-12-09
+1006, Emily Davis, emily.davis@example.com, 2024-12-06, 2024-12-10
+1007, Frank White, frank.white@example.com, 2024-12-07, 2024-12-11
+1008, Grace Green, grace.green@example.com, 2024-12-08, 2024-12-12
+1009, Henry Clark, henry.clark@example.com, 2024-12-09, 2024-12-13
+1010, Iris Carter, iris.carter@example.com, 2024-12-10, 2024-12-14

@@ -1,0 +1,11 @@
+GuestId|GuestName|Phone Number|RoomNo|Date(check-in & check-out)|Bill Amount|Mode of Payment
+201|John Doe|123-456-7890|101|2024-12-01 to 2024-12-05|$300|Credit Card
+202|Jane Smith|234-567-8901|102|2024-12-02 to 2024-12-06|$400|Cash
+203|Alice Brown|345-678-9012|103|2024-12-03 to 2024-12-07|$350|Debit Card
+204|Bob Johnson|456-789-0123|104|2024-12-04 to 2024-12-08|$500|Online Transfer
+205|Charlie Lee|567-890-1234|105|2024-12-05 to 2024-12-09|$450|Credit Card
+206|Emily Davis|678-901-2345|106|2024-12-06 to 2024-12-10|$600|Cash
+207|Frank White|789-012-3456|107|2024-12-07 to 2024-12-11|$550|Debit Card
+208|Grace Green|890-123-4567|108|2024-12-08 to 2024-12-12|$650|Online Transfer
+209|Henry Clark|901-234-5678|109|2024-12-09 to 2024-12-13|$700|Credit Card
+210|Iris Carter|012-345-6789|110|2024-12-10 to 2024-12-14|$800|Cash

@@ -1,0 +1,11 @@
+GuestId|GuestName|ComplaintType|Category|RoomNo|Phone|StatusOfComplaint
+101|John Doe|Service|Food Quality|101|123-456-7890|Active
+102|Jane Smith|Room|Cleanliness|102|234-567-8901|Resolved
+103|Alice Brown|Service|AC not working|103|345-678-9012|Active
+104|Bob Johnson|Room|Leakage|104|456-789-0123|Resolved
+105|Charlie Lee|Service|Room Service Delay|105|567-890-1234|Active
+106|Emily Davis|Room|Broken TV|106|678-901-2345|Resolved
+107|Frank White|Service|Internet Speed|107|789-012-3456|Active
+108|Grace Green|Room|No Hot Water|108|890-123-4567|Resolved
+109|Henry Clark|Service|Noise|109|901-234-5678|Active
+110|Iris Carter|Room|Pest Control|110|012-345-6789|Resolved

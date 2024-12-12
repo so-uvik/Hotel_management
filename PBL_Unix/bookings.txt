@@ -1,0 +1,11 @@
+Booking ID|Guest name|Contact details|Check in/Check out dates|Upcoming bookings date
+1001|John Doe|john.doe@example.com, 123-456-7890|2024-12-01 to 2024-12-05|2024-12-15
+1002|Jane Smith|jane.smith@example.com, 234-567-8901|2024-12-02 to 2024-12-06|2024-12-20
+1003|Alice Brown|alice.brown@example.com, 345-678-9012|2024-12-03 to 2024-12-07|2024-12-18
+1004|Bob Johnson|bob.johnson@example.com, 456-789-0123|2024-12-04 to 2024-12-08|2024-12-22
+1005|Charlie Lee|charlie.lee@example.com, 567-890-1234|2024-12-05 to 2024-12-09|2024-12-25
+1006|Emily Davis|emily.davis@example.com, 678-901-2345|2024-12-06 to 2024-12-10|2024-12-30
+1007|Frank White|frank.white@example.com, 789-012-3456|2024-12-07 to 2024-12-11|2024-12-17
+1008|Grace Green|grace.green@example.com, 890-123-4567|2024-12-08 to 2024-12-12|2024-12-21
+1009|Henry Clark|henry.clark@example.com, 901-234-5678|2024-12-09 to 2024-12-13|2024-12-24
+1010|Iris Carter|iris.carter@example.com, 012-345-6789|2024-12-10 to 2024-12-14|2024-12-28

@@ -1,0 +1,11 @@
+Booking ID|Guest name|Status|Room type
+1001|John Doe|Booked|Single
+1002|Jane Smith|Approved|Double
+1003|Alice Brown|Booked|Suite
+1004|Bob Johnson|Cancelled|Single
+1005|Charlie Lee|Approved|Double
+1006|Emily Davis|Available|Suite
+1007|Frank White|Approved|Single
+1008|Grace Green|Booked|Suite
+1009|Henry Clark|Booked|Double
+1010|Iris Carter|Available|Suite

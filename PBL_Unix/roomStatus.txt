@@ -1,0 +1,11 @@
+UserID|UserName|RoomType|Status|Price range|Date
+1|John Doe|Single|Booked|$100-$150|2024-12-01
+2|Jane Smith|Double|Available|$150-$200|2024-12-02
+3|Alice Brown|Suite|Booked|$200-$300|2024-12-03
+4|Bob Johnson|Single|Cancelled|$100-$150|2024-12-04
+5|Charlie Lee|Double|Booked|$150-$200|2024-12-05
+6|Emily Davis|Suite|Available|$200-$300|2024-12-06
+7|Frank White|Single|Available|$100-$150|2024-12-07
+8|Grace Green|Suite|Booked|$200-$300|2024-12-08
+9|Henry Clark|Double|Booked|$150-$200|2024-12-09
+10|Iris Carter|Suite|Available|$200-$300|2024-12-10
