@@ -11,7 +11,7 @@ awk -F'|' '$4 == "Available" {print $3, $6}' roomStatus.txt
 - If you want the output to be structured, pipe(|) the output of the previous command to `column -t`
 
 ```sh
-awk -F'|' '{$4 == "Available"} {print $3, $4}' roomStatus.txt | column -t
+awk -F'|' '$4 == "Available" {print $3, $6}' roomStatus.txt | column -t
 ```
 
 >[!NOTE]
