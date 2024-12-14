@@ -53,7 +53,7 @@ sort -t '|' -k5,5r bookings.txt
 sort -t '|' -k5,5r bookings.txt | column -s '|' -t
 ```
 
-- If by chance the invigilator the asks the output to be only three columns i.e. Booking ID, Guest name, Upcoming Bookings Date
+- If by chance the invigilator asks the output to show only three columns i.e. Booking ID, Guest name, Upcoming Bookings Date
 
 ```sh
 sort -t '|' -k5,5r bookings.txt | awk -F'|' '{print $1, $2, $5}' 
@@ -72,7 +72,7 @@ Question: Write a unix command to retrieve the details of the guest whose name=S
 - Answer
 
 ```sh
-awk -F',' '/Shar/ {print;found=1} END{if(found!=1) print "no details found"}' reservation2.txt
+awk -F',' '/Sharan/ {print;found=1} END{if(found!=1) print "no details found"}' reservation2.txt
 ```
 
 - In order to test the "no details found" condition remove the last two entries from the `reservation2.txt` file and run the above command again.
