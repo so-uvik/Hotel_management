@@ -1,14 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins');
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-}
+/* * { */
+/*     margin: 0; */
+/*     padding: 0; */
+/*     box-sizing: border-box; */
+/*     font-family: "Poppins", sans-serif; */
+/* } */
 
-body {
-    background-color: white;
-}
 .active {
     color: black;
 }
@@ -66,9 +63,9 @@ body {
     border-radius: 10px;
     padding: 5px;
 }
-.h{
-    margin-top: 10px;
-}
+/* .h{ */
+/*     margin-top: 10px; */
+/* } */
 .rate-box i{
     color: #D9E6FF;
     cursor: pointer;

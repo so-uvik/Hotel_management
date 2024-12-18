@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Luxury Hotels</title>
-  <link href="styles.css" rel="stylesheet">
-  <link rel="stylesheet" href="Feedback.css">
+  <link href="../css/styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/feedback.css">
 
   <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
   <style>
@@ -66,7 +66,7 @@
 
   main {
     grid-area: main;
-    padding: 15px;
+    padding: 15px 60px 0px 60px;
     background-color: #f1f5f9;
   }
 </style>
@@ -92,11 +92,11 @@
   <!-- Sidebar Component -->
   <aside>
     <div class="sidebar">
-      <a href="#"><i class="ph ph-house"></i>Home</a>
+      <a href="../index.html"><i class="ph ph-house"></i>Home</a>
       <a href="#"><i class="ph ph-calendar-blank"></i>Reservation</a>
-      <a href="#"><i class="ph ph-file-text"></i>Billing</a>
       <a href="#"><i class="ph ph-clock-counter-clockwise"></i>History</a>
       <a href="#"><i class="ph ph-book-open"></i>Bookings</a>
+      <a href="./billing.html"><i class="ph ph-file-text"></i>Billing</a>
       <a href="#"><i class="ph ph-headphones"></i>Support</a>
     </div>
   </aside>
@@ -107,14 +107,15 @@
     <div class="card">
       <div class="form-header">
         <span class="red">
-          <button style="border: none; padding: 10px; cursor: pointer;"><i class="ph ph-info" style="margin: 5px;"></i>Register
+          <button style="border: none; padding: 10px; cursor: pointer;"><i class="ph ph-info"
+              style="margin: 5px;"></i>Register
             Complaint</button>
         </span>
         <span class="blue">
           <button class="a" style="border: none; padding: 10px; cursor: pointer;"><i class="ph ph-chat"
               style="margin: 5px;"></i>Share
             Feedback</button>
-          </span>
+        </span>
       </div>
       <div class="change">
         <div class="feedback-form">
@@ -136,6 +137,6 @@
     </div>
   </main>
 </body>
-<script src="Feedback.js"></script>
+<script src="../js/feedback.js" defer></script>
 
 </html>

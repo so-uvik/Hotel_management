@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Luxury Hotels</title>
-  <link href="css/styles.css" rel="stylesheet">
+  <link href="../css/styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/billing.css">
 
   <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
   <style>
@@ -65,7 +66,7 @@
 
   main {
     grid-area: main;
-    padding: 15px;
+    padding: 15px 60px 0px 60px;
     background-color: #f1f5f9;
     opacity: 0;
     animation: fadeIn 0.5s forwards;
@@ -75,7 +76,6 @@
     to {
       opacity: 1;
     }
-  }
   }
 </style>
 
@@ -100,15 +100,49 @@
   <!-- Sidebar Component -->
   <aside>
     <div class="sidebar">
-      <a href="#"><i class="ph ph-house"></i>Home</a>
-      <a href="./pages/reservation.html"><i class="ph ph-calendar-blank"></i>Reservation</a>
+      <a href="../index.html"><i class="ph ph-house"></i>Home</a>
+      <a href="./reservation.html"><i class="ph ph-calendar-blank"></i>Reservation</a>
       <a href="#"><i class="ph ph-clock-counter-clockwise"></i>History</a>
       <a href="#"><i class="ph ph-book-open"></i>Bookings</a>
-      <a href="./pages/billing.html"><i class="ph ph-file-text"></i>Billing</a>
-      <a href="./pages/feedback.html"><i class="ph ph-headphones"></i>Support</a>
+      <a href="./billing.html"><i class="ph ph-file-text"></i>Billing</a>
+      <a href="./feedback.html"><i class="ph ph-headphones"></i>Support</a>
     </div>
   </aside>
-  <main>----------------------Your content goes here---------------------------</main>
+  <main>
+    <h1>Billing Details</h1>
+    <div class="billing-outer">
+      <h3>Bill Details</h3>
+      <div class="billing-inner">
+        <span>Booking ID</span><span>BK123456</span>
+      </div>
+      <hr />
+      <h3>Room Charges</h3>
+      <div class="billing-inner">
+        <span>Room rate</span><span>$350</span>
+      </div>
+      <hr />
+      <h3>Additional Services</h3>
+      <div class="billing-inner">
+        <span>Room Service</span><span>$50</span>
+      </div>
+      <div class="billing-inner">
+        <span>Spa Services</span><span>$120</span>
+      </div>
+      <hr />
+      <div class="billing-inner">
+        <span>Tax</span><span>$52</span>
+      </div>
+      <hr />
+      <div class="billing-inner">
+        <h4>Total Amount</h4>
+        <h4>$572</h4>
+      </div>
+      <button class="billing-button">
+        <i class="ph ph-credit-card"></i>
+        <p>Proceed to Payment</p>
+      </button>
+    </div>
+  </main>
 </body>
 
 </html>
