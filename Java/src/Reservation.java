@@ -6,8 +6,7 @@ public class Reservation {
     private String name;
     private String contact;
 
-    public Reservation(int reservationId, String checkInDate, String checkOutDate, String roomPreference, String name, String contact) {
-        this.reservationId = reservationId;
+    public Reservation(String checkInDate, String checkOutDate, String roomPreference, String name, String contact) {
         this.checkInDate = checkInDate;
         this.checkOutDate = checkOutDate;
         this.roomPreference = roomPreference;
