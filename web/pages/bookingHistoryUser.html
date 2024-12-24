@@ -1,11 +1,10 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Luxury Hotels</title>
-    <link href="css/styles.css" rel="stylesheet" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookings</title>
+    <link rel="stylesheet" href="../css/bookingHistory.css" />
     <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
@@ -13,8 +12,7 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
     </style>
-  </head>
-  <style>
+      <style>
     .sidebar a:hover,
     .sidebar a i:hover {
       background-color: rgb(240, 246, 255);
@@ -46,12 +44,12 @@
     }
 
     .logo {
-      background-image: linear-gradient(to right, #3290B8, #3E2EB8);
+      background-image: linear-gradient(to right, #3290b8, #3e2eb8);
       color: transparent;
       background-clip: text;
       font-size: 25px;
       font-weight: bold;
-      font-family: 'Poppins';
+      font-family: "Poppins";
     }
 
     nav {
@@ -64,22 +62,14 @@
 
     main {
       grid-area: main;
-      padding: 15px;
+      padding: 15px 60px 0px 60px;
       background-color: #f1f5f9;
-      opacity: 0;
-      animation: fadeIn 0.5s forwards;
     }
-
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-      }
-    }
-    
   </style>
-
+  </head>
   <body>
-    <!--Header component -->
+    <!-- Navbar -->
+   <!--Header component -->
     <nav>
       <div
         style="
@@ -105,24 +95,62 @@
     </nav>
 
     <!-- Sidebar Component -->
-    <aside>
+      <aside>
       <div class="sidebar">
-        <a href="#"><i class="ph ph-house"></i>Home</a>
-        <a href="./pages/reservation.html"
+        <a href="../index.html"><i class="ph ph-house"></i>Home</a>
+        <a href="./reservation.html"
           ><i class="ph ph-calendar-blank"></i>Reservation</a
         >
-        <a href="./pages/bookingHistoryUser.html"><i class="ph ph-clock-counter-clockwise"></i>History</a>
+        <a href="./bookingHistoryUser.html"
+          ><i class="ph ph-clock-counter-clockwise"></i>History</a
+        >
         <a href="#"><i class="ph ph-book-open"></i>Bookings</a>
-        <a href="./pages/billing.html"
+        <a href="./billing.html"
           ><i class="ph ph-file-text"></i>Billing</a
         >
-        <a href="./pages/feedback.html"
+        <a href="./feedback.html"
           ><i class="ph ph-headphones"></i>Support</a
         >
       </div>
     </aside>
-    <main>
-      ----------------------Your content goes here---------------------------
+
+    <!-- Main Content -->
+    <main class="content">
+      <h1>Your Bookings</h1>
+
+      <!-- Booking Cards -->
+      <div class="booking-card">
+        <div class="card-details">
+          <h2 class="room-type">Deluxe Suite</h2>
+          <p class="booking-id">Booking ID: BK789</p>
+          <p class="dates">
+            <span><i class="ph ph-calendar"></i> Check-in: 2024-03-20</span>
+            <span><i class="ph ph-calendar"></i> Check-out: 2024-03-25</span>
+          </p>
+          <p class="guests"><i class="ph ph-user"></i> Guests: 2 Adults</p>
+        </div>
+        <div class="card-footer">
+          <p class="price">$1200</p>
+          <span class="status confirmed">Confirmed</span>
+        </div>
+      </div>
+
+      <div class="booking-card">
+        <div class="card-details">
+          <h2 class="room-type">Executive Room</h2>
+          <p class="booking-id">Booking ID: BK790</p>
+          <p class="dates">
+            <span><i class="ph ph-calendar"></i> Check-in: 2024-04-01</span>
+            <span><i class="ph ph-calendar"></i> Check-out: 2024-04-03</span>
+          </p>
+          <p class="guests"><i class="ph ph-user"></i> Guests: 1 Adult</p>
+        </div>
+        <div class="card-footer">
+          <p class="price">$800</p>
+          <span class="status pending">Pending</span>
+        </div>
+      </div>
     </main>
+    <script src="../js/bookingHistoryUser.js"></script>
   </body>
 </html>
