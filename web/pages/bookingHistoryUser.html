@@ -1,10 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bookings</title>
     <link rel="stylesheet" href="../css/bookingHistory.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
     <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
@@ -12,64 +13,64 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
     </style>
-      <style>
-    .sidebar a:hover,
-    .sidebar a i:hover {
-      background-color: rgb(240, 246, 255);
-    }
+    <style>
+      .sidebar a:hover,
+      .sidebar a i:hover {
+        background-color: rgb(240, 246, 255);
+      }
 
-    .sidebar {
-      display: flex;
-      flex-direction: column;
-      line-height: 3;
-      padding: 15px;
-      font-size: 18px;
-      height: 100vh;
-      box-shadow: 0px 10px 10px 3px rgba(0, 0, 0, 0.1);
-    }
+      .sidebar {
+        display: flex;
+        flex-direction: column;
+        line-height: 3;
+        padding: 15px;
+        font-size: 18px;
+        height: 100vh;
+        box-shadow: 0px 10px 10px 3px rgba(0, 0, 0, 0.1);
+      }
 
-    .sidebar i {
-      background-color: transparent;
-      margin-right: 10px;
-    }
+      .sidebar i {
+        background-color: transparent;
+        margin-right: 10px;
+      }
 
-    .sidebar a {
-      padding: 0 5px 0 5px;
-      color: #475569;
-      border-radius: 10px;
-    }
+      .sidebar a {
+        padding: 0 5px 0 5px;
+        color: #475569;
+        border-radius: 10px;
+      }
 
-    .sidebar a:hover {
-      color: rgba(0, 80, 146, 0.808);
-    }
+      .sidebar a:hover {
+        color: rgba(0, 80, 146, 0.808);
+      }
 
-    .logo {
-      background-image: linear-gradient(to right, #3290b8, #3e2eb8);
-      color: transparent;
-      background-clip: text;
-      font-size: 25px;
-      font-weight: bold;
-      font-family: "Poppins";
-    }
+      .logo {
+        background-image: linear-gradient(to right, #3290b8, #3e2eb8);
+        color: transparent;
+        background-clip: text;
+        font-size: 25px;
+        font-weight: bold;
+        font-family: "Poppins";
+      }
 
-    nav {
-      grid-area: navbar;
-    }
+      nav {
+        grid-area: navbar;
+      }
 
-    aside {
-      grid-area: sidebar;
-    }
+      aside {
+        grid-area: sidebar;
+      }
 
-    main {
-      grid-area: main;
-      padding: 15px 60px 0px 60px;
-      background-color: #f1f5f9;
-    }
-  </style>
+      main {
+        grid-area: main;
+        padding: 15px 60px 0px 60px;
+        background-color: #f1f5f9;
+      }
+    </style>
   </head>
   <body>
     <!-- Navbar -->
-   <!--Header component -->
+    <!--Header component -->
     <nav>
       <div
         style="
@@ -95,7 +96,7 @@
     </nav>
 
     <!-- Sidebar Component -->
-      <aside>
+    <aside>
       <div class="sidebar">
         <a href="../index.html"><i class="ph ph-house"></i>Home</a>
         <a href="./reservation.html"
@@ -105,12 +106,8 @@
           ><i class="ph ph-clock-counter-clockwise"></i>History</a
         >
         <a href="#"><i class="ph ph-book-open"></i>Bookings</a>
-        <a href="./billing.html"
-          ><i class="ph ph-file-text"></i>Billing</a
-        >
-        <a href="./feedback.html"
-          ><i class="ph ph-headphones"></i>Support</a
-        >
+        <a href="./billing.html"><i class="ph ph-file-text"></i>Billing</a>
+        <a href="./feedback.html"><i class="ph ph-headphones"></i>Support</a>
       </div>
     </aside>
 
