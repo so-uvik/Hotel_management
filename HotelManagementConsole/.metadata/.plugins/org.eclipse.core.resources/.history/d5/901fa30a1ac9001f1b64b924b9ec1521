@@ -1,0 +1,146 @@
+package com.tcs.reservation;
+
+import com.tcs.hotelManagement.User;
+import com.tcs.rooms.AvailableRooms;
+import java.util.*;
+import com.tcs.rooms.RoomStatus;
+public class Reservation{
+	
+	public static void newReservation(ArrayList<Reserve> reserveArray,ArrayList<User>users,ArrayList <AvailableRooms> RoomsArray) {
+		Scanner sc=new Scanner(System.in);
+		
+		System.out.println("Enter the User ID ");
+		int userID=sc.nextInt();sc.nextLine();
+		int count=0;
+		for(User u:users) {
+			if(u.getUserId()==userID) {
+				System.out.println("User Found !!!");
+				count++;
+				break;
+			}
+		}
+		
+		
+		
+		System.out.println("All Available room status are: ");
+		RoomStatus.roomStatusUser(RoomsArray);
+		if(count==1) {
+			
+			
+			System.out.println("Enter Room Type (1 BHK,2 BHK or 3 BHK)");
+			int no=sc.nextInt();
+			int cnt=0;
+			for(AvailableRooms room: RoomsArray) {
+				
+				
+				if(room.getAvailabilityStatus()=="Vaccant" && room.getRoomType()==no) {
+					cnt=0;
+			
+					System.out.println("Great "+no+" BHK Room Found Vaccant !!!!");
+					System.out.println("Location Found :"+room.getPlace());		
+					System.out.println("Room selected at "+room.getPlace());
+					System.out.println("Enter the Name ");
+					String name=sc.next();
+					System.out.print("Enter the Check In Date");
+					String checkInDate=sc.next();
+					System.out.print("Enter the Check out Date");
+					String checkOutDate=sc.next();
+					System.out.print("Enter the Room Status (Single/Double)");
+					String roomStatus=sc.next();
+						
+						room.setDate(checkInDate);
+						//checkout date is not set 
+						System.out.println("Enter the Contact No");
+						long contactNo=sc.nextLong();
+						
+						String paymentStatus="Unpaid";
+						System.out.println("Room No Allocated is " +room.getRoomNo());
+						int roomNo=room.getRoomNo();
+						room.setAvailabilityStatus("Occupied");
+						Reserve obj =new Reserve(name,checkInDate,checkOutDate,roomStatus,contactNo,userID,roomNo,paymentStatus);
+						reserveArray.add(obj);
+						System.out.println("!!! New Reservation Added Succesfully !!!");
+						break;
+					
+					}
+					
+					
+				}
+			if(cnt==0) {
+			
+				System.out.println("Sorry "+no+" BHK room not available now !!!");
+			}
+			
+			
+		
+		
+		
+		}
+		else {
+			System.out.println("No User found Register First");
+		}
+		
+		
+	}	
+	public static void updateReservation(ArrayList<Reserve> reserveArray,ArrayList<User>users) {
+		
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the Reservation ID");
+		int reservationId=sc.nextInt();sc.nextLine();
+		System.out.println("Enter the User ID");
+		int userId=sc.nextInt();sc.nextLine();
+		System.out.println("Enter the new Name");
+		String name=sc.nextLine();
+		for(Reserve r:reserveArray) {
+			if(r.getReservationId()==reservationId && r.userId==userId) {
+				r.setName(name);
+				System.out.println("User Details Updated successfully");
+				break;
+			}
+		}
+		
+	}
+	public static void deleteReservation(ArrayList<Reserve> reserveArray) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the Reservation ID");
+		int reservationId=sc.nextInt();
+		System.out.println("Enter the User ID");
+		int userId=sc.nextInt();
+		
+		for(Reserve r:reserveArray) {
+			if(r.getReservationId()==reservationId && r.userId==userId) {
+				reserveArray.remove(r);
+				System.out.println("Reservation Deleted successfully");
+				break;
+			}
+		}
+		
+	}
+	
+	public static void reservationUser(ArrayList<Reserve> reserveArray,ArrayList<User>users,ArrayList <AvailableRooms> RoomsArray){
+		Scanner sc=new Scanner(System.in);
+		int choice;		
+		do {
+		System.out.println("----Menu for Reservation----");
+		System.out.println("----Press 1 for new reseravation details ----");
+		System.out.println("----Press 2 for update reseravation details----");
+		System.out.println("----Press 3 for delete reseravation details----");
+		System.out.println("----Press 4 to Return----");
+
+		System.out.println("----Select an option----");
+		choice=sc.nextInt();sc.nextLine();
+		
+		switch(choice) {
+		case 1:newReservation(reserveArray,users,RoomsArray);break;
+		case 2:updateReservation(reserveArray,users);break;		
+		case 3:deleteReservation(reserveArray);break;
+		case 4:System.out.println("---- Returning to previous menu ----");break;
+		}
+
+		
+		}while(choice!=4);
+		
+		
+		
+	}
+}

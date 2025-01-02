@@ -1,0 +1,59 @@
+package com.tcs.Auth;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+import com.tcs.DbConnection.DbConnection;
+import com.tcs.HotelManagement.User;
+
+public class UserRegistrationDAO {
+
+    // SQL query to insert user data into the User table
+    public static String registerUsers = "INSERT INTO UserProfile (UserID, FullName, Email, MobileNumber, Password) VALUES (?, ?, ?, ?, ?)";
+    
+    public static boolean userRegistrationDB(ArrayList<User> users) throws SQLException {
+        Connection con = null;
+        PreparedStatement pstmt = null;
+        
+        try {
+            // Establish database connection
+            con = DbConnection.DbConnector();
+            pstmt = con.prepareStatement(registerUsers);
+
+            // Loop through the list of users and add batch statements
+            for (User user : users) {
+                pstmt.setInt(1, user.getUserId()); // Assuming UserID is an integer
+                pstmt.setString(2, user.getFullname());
+                pstmt.setString(3, user.getEmail());
+                pstmt.setString(4, user.getMobileNumber());
+                pstmt.setString(5, user.getPassword());
+                pstmt.addBatch(); // Add to batch
+            }
+
+            // Execute the batch update
+            int[] rowsAffected = pstmt.executeBatch();
+
+            // Check if all rows were successfully inserted
+            for (int rows : rowsAffected) {
+                if (rows == PreparedStatement.EXECUTE_FAILED) {
+                    return false; // Return false if any insert failed
+                }
+            }
+            return true; // Return true if all inserts were successful
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        } finally {
+            // Close resources
+            if (pstmt != null) {
+                pstmt.close();
+            }
+            if (con != null) {
+                con.close();
+            }
+        }
+    }
+}

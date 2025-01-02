@@ -1,0 +1,97 @@
+package com.tcs.HotelManagement;
+
+import com.tcs.Auth.Auth;
+import com.tcs.Auth.UserProfile;
+import com.tcs.billing.BillingDetails;
+import com.tcs.booking.Booking;
+import com.tcs.reservation.Reserve;
+import com.tcs.rooms.AvailableRooms;
+import com.tcs.support.Complain;
+
+import java.sql.SQLException;
+import java.util.*;
+public class Management {
+	
+
+	public static void main(String[] args) throws SQLException {
+		//Admin ID and Password Fixed manually 
+		int adminID=1;
+		String adminPassword="admin";
+		
+		
+		//Users Data Array
+		ArrayList<User> users=new ArrayList<User>() ;
+		ArrayList <Complain> complainArray = new ArrayList<Complain>();
+		ArrayList <AvailableRooms> RoomsArray=new ArrayList<AvailableRooms>();
+	    ArrayList<BillingDetails> BillingDetailsArray=new ArrayList<BillingDetails>();
+		AvailableRooms room1 =new AvailableRooms(1,1,"12","500","MahishBathan","Vaccant");
+		AvailableRooms room2 =new AvailableRooms(2,2,"23","800","Sector-V","Occupied");
+		AvailableRooms room3 =new AvailableRooms(3,2,"22","1000","Kestopur","Vaccant");
+		AvailableRooms room4 =new AvailableRooms(4,3,"18","1000","Rajarhat","Occupied");
+		AvailableRooms room5 =new AvailableRooms(5,3,"29","600","Kaikhali","Vaccant");
+		RoomsArray.add(room1);
+		RoomsArray.add(room2);
+		RoomsArray.add(room3);
+		RoomsArray.add(room4);
+		RoomsArray.add(room5);
+		
+		
+		User u=new User(1234,"Agnisis","agni@gmail.com","1234565782","agnisis");
+		User r=new User(5678,"somya","somya@gmail.com","1234565782","somya");
+		User s=new User(1111,"kaka","kaka@gmail.com","1234565782","kaka");
+		users.add(u);
+		users.add(r);
+		users.add(s);
+		ArrayList<Reserve> reserveArray=new ArrayList<Reserve>();
+		
+		Scanner sc=new Scanner(System.in);
+		
+		
+		System.out.println(" !!! Welcome to Hotel Management System !!! ");
+		
+		
+		//seperate gateway for user and admin authentication
+		int role;
+		do {
+			System.out.println("---- Press 1 For Admin ----");
+			System.out.println("---- Press 2 For User ----");
+			System.out.println("---- Press 0 to Exit ----");
+			role=sc.nextInt();
+			
+			//for admin
+			if(role==1) {
+				Auth.UserManagementAdmin();				
+			}
+			//for user
+			else if(role==2) {
+				int choiceUser;
+				
+				//user has choice to manage details or login 
+				do {
+					System.out.println("----- Menu -----");
+					System.out.println("----- Press 1 for User Management-----");
+					System.out.println("----- Press 2 for Log In-----");
+					System.out.println("----- Press 0 to Return-----");
+					System.out.println("Enter the Choice !!!!");
+					
+					choiceUser=sc.nextInt();
+					
+					switch(choiceUser){
+					case 1: Auth.UserManagementUser(users);break;		
+					case 2: Auth.loginMenu(users,adminID,adminPassword,reserveArray,complainArray,RoomsArray,BillingDetailsArray);break;
+					case 0: System.out.println("!!! Returned to previous Menu !!!");break;			
+					default:System.out.println("!!! Invalid input provided !!!");	
+					}
+				}while(choiceUser!=0);
+				
+			}
+			else if(role==0) {System.out.println("!!! Exiting Program !!!");}
+			else {System.out.println("!!! Invalid input provided !!!");	}
+			
+		}while(role!=0);
+		
+
+sc.close();
+	}
+	
+}
