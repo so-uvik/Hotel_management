@@ -119,50 +119,11 @@
     </aside>
     <main>
       <h1>Generate Invoice</h1>
-      <div id="invoice-view" class="invoice-container" style="display: block">
-        <div class="invoice-card">
-          <div class="invoice-header">
-            <h2>Bill Details</h2>
-            <div>
-              <i class="ph ph-pencil" id="edit-icon"></i>
-              <i class="ph ph-download-simple"></i>
-            </div>
-          </div>
-          <p><strong>Booking ID:</strong> BK123456</p>
-          <p><strong>Room Charges:</strong> $350.00</p>
-          <p><strong>Additional Services:</strong></p>
-          <ul>
-            <li>Room Service: $50.00</li>
-            <li>Spa Services: $120.00</li>
-          </ul>
-          <p><strong>Tax (10%):</strong> $57.00</p>
-          <h3><strong>Total Amount:</strong> $572.00</h3>
-        </div>
-      </div>
-
-      <div id="invoice-edit" class="invoice-container" style="display: none">
-        <div class="invoice-card">
-          <div class="invoice-header">
-            <h2>Edit Bill Details</h2>
-            <i class="ph ph-eye" id="view-icon"></i>
-          </div>
-          <label>Booking ID:</label>
-          <input type="text" id="booking-id" value="BK123456" />
-
-          <label>Room Charges:</label>
-          <input type="number" id="room-charges" value="350" />
-
-          <label>Room Service:</label>
-          <input type="number" id="room-service" value="50" />
-
-          <label>Spa Services:</label>
-          <input type="number" id="spa-services" value="120" />
-
-          <p><strong>Tax (10%):</strong> <span id="tax-amount">$57.00</span></p>
-          <h3>
-            <strong>Total Amount:</strong>
-            <span id="total-amount">$572.00</span>
-          </h3>
+      <div class="invoice-container">
+        <div class="generate-invoice">
+          <h4>Enter user Id</h4>
+          <input type="text" class="invoice-input" />
+          <button type="button" class="invoice-button">Generate Invoice</button>
         </div>
       </div>
     </main>
